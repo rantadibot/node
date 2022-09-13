@@ -1,0 +1,8 @@
+.button + .content {
+  display: none;
+  font-size: 20px;
+}
+
+.button + .content.show {
+  display: block;
+}
