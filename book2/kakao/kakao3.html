@@ -18,7 +18,7 @@
 
     <script type="text/javascript">
       //키 바꿈
-      Kakao.init("[javascript키]");
+      Kakao.init("10427c727cc32d3586ff733617707375");
       Kakao.Link.createDefaultButton({
         container: "#create-kakao-link-btn",
         objectType: "feed",
@@ -72,6 +72,22 @@
         //   description:
         //     "부담없는 가격에 푸짐하게 즐기는 점심메뉴 런치한정식, 불고기정식, 돼지 김치찌개 등",
         // },
+      });
+    </script>
+
+    <a id="send-to-btn2" href="javascript:;">
+      <img
+        src="//k.kakaocdn.net/14/dn/btqc6xrxbuT/7VJk7YSWITkz9K9pbXEffk/o.jpg"
+        alt="나에게 보내기 버튼"
+    /></a>
+
+    <script type="text/javascript">
+      Kakao.Share.createCustomButton({
+        container: "#send-to-btn2",
+        templateId: 82886,
+        templateArgs: {
+          title1: "판교 맛집에 들르다.",
+        },
       });
     </script>
 
