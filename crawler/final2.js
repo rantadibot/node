@@ -1,15 +1,13 @@
+const DomesticCrawler2 = require("./sucess2.js");
 const fs = require("fs");
-const DomesticCrawler = require("./sucess.js");
-
 async function main() {
   try {
-    const domesticCrawler = new DomesticCrawler();
-    const result = await domesticCrawler.moef();
-    // console.log(result);
+    const domesticCrawler2 = new DomesticCrawler2();
+    const result = await domesticCrawler2.motie();
     mains = JSON.stringify(result);
-    fs.writeFileSync("test.json", mains, "utf-8");
+    fs.writeFileSync("../book2/kakao/test2.json", mains, "utf-8");
   } catch (e) {
-    console.error("moef failed", e);
+    console.error("motie failed", e);
   }
 }
 
