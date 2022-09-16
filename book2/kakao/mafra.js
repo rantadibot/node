@@ -15,7 +15,7 @@ readJSON("./test3.json", function (text) {
   var Data = JSON.parse(text);
   d.push(Object.values(Data));
   Kakao.Share.createCustomButton({
-    container: "#send-to-btn3",
+    container: "#mafra-btn",
     templateId: 71382,
     templateArgs: {
       date0: d[0][0],

@@ -14,10 +14,8 @@ e = [];
 readJSON("./test4.json", function (text) {
   var Data = JSON.parse(text);
   e.push(Object.values(Data));
-  Kakao.init("10427c727cc32d3586ff733617707375");
-
   Kakao.Share.createCustomButton({
-    container: "#send-to-btn0",
+    container: "#mcst-btn",
     templateId: 71387,
     templateArgs: {
       date0: e[0][0],
