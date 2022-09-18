@@ -9,10 +9,9 @@
   </head>
   <body>
     <div id="start">
-      <h1>
-        오늘의 날짜
-        :{{date.getFullYear()}}년-{{parseInt(date.getMonth())+1}}월-{{date.getDate()}}일
-      </h1>
+      <h1>{{calcDate}}</h1>
+      <h2>{{calcDate}}</h2>
+      <h3>{{calcDate}}</h3>
     </div>
     <script type="text/javascript">
       let app = new Vue({
@@ -21,6 +20,20 @@
           return {
             date: new Date(),
           };
+        },
+        computed: {
+          calcDate: function () {
+            return (
+              this.date.getFullYear() +
+              "년" +
+              parseInt(this.date.getMonth() + 1) +
+              "월" +
+              this.date.getDate() +
+              "일" +
+              this.date.getDay() +
+              "요일"
+            );
+          },
         },
       });
     </script>

@@ -9,18 +9,22 @@
   </head>
   <body>
     <div id="start">
-      <h1>
-        오늘의 날짜
-        :{{date.getFullYear()}}년-{{parseInt(date.getMonth())+1}}월-{{date.getDate()}}일
-      </h1>
+      <input type="text" v-model:value="value" />
+      <div v-show="isAnswer">안녕하세요!</div>
     </div>
     <script type="text/javascript">
       let app = new Vue({
         el: "#start",
         data() {
           return {
-            date: new Date(),
+            value: "",
+            isAnswer: false,
           };
+        },
+        watch: {
+          value: function (v) {
+            this.isAnswer = true;
+          },
         },
       });
     </script>

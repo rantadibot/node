@@ -9,17 +9,16 @@
   </head>
   <body>
     <div id="start">
-      <h1>
-        오늘의 날짜
-        :{{date.getFullYear()}}년-{{parseInt(date.getMonth())+1}}월-{{date.getDate()}}일
-      </h1>
+      <ul>
+        <li v-for="data in dataSet">{{data.t}}</li>
+      </ul>
     </div>
     <script type="text/javascript">
       let app = new Vue({
         el: "#start",
         data() {
           return {
-            date: new Date(),
+            dataSet: [{ t: "1" }, { t: "2" }, { t: "3" }, { t: "4" }],
           };
         },
       });

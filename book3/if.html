@@ -9,17 +9,19 @@
   </head>
   <body>
     <div id="start">
-      <h1>
-        오늘의 날짜
-        :{{date.getFullYear()}}년-{{parseInt(date.getMonth())+1}}월-{{date.getDate()}}일
-      </h1>
+      <h1 v-if="condition1">1</h1>
+      <h1 v-if="condition2">2</h1>
+      <h1 v-if="condition3">3</h1>
     </div>
+
     <script type="text/javascript">
       let app = new Vue({
         el: "#start",
         data() {
           return {
-            date: new Date(),
+            condition1: true,
+            condition2: false,
+            condition3: true,
           };
         },
       });

@@ -9,17 +9,16 @@
   </head>
   <body>
     <div id="start">
-      <h1>
-        오늘의 날짜
-        :{{date.getFullYear()}}년-{{parseInt(date.getMonth())+1}}월-{{date.getDate()}}일
-      </h1>
+      <button type="button" name="button" v-on:click="value += 1">+</button>
+      <button type="button" name="button" v-on:click="value -= 1">-</button>
+      <h1>{{value}}</h1>
     </div>
     <script type="text/javascript">
       let app = new Vue({
         el: "#start",
         data() {
           return {
-            date: new Date(),
+            value: 1,
           };
         },
       });
