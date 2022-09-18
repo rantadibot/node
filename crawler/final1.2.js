@@ -1,4 +1,4 @@
-const DomesticCrawler1 = require("./sucess1.js");
+const DomesticCrawler1 = require("./sucess1.2.js");
 const fs = require("fs");
 
 async function main() {
@@ -7,7 +7,7 @@ async function main() {
     const result = await domesticCrawler1.moef();
     // console.log(result);
     mains = JSON.stringify(result);
-    fs.writeFileSync("../book2/kakao/test1.json", mains, "utf-8");
+    fs.writeFileSync("../book2/kakao/test1.2.json", mains, "utf-8");
   } catch (e) {
     console.error("moef failed", e);
   }
