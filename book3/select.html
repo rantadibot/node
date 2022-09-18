@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue 시작하기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>vue 시작하기</h1>
+    <div id="start">
+      <select v-model="select">
+        <option value="" disabled>옵션 중 하나를 선택해주세요</option>
+        <option value="기재부">기재부</option>
+        <option value="산업부">산업부</option>
+        <option value="금융위">금융위</option>
+      </select>
+      <h1>{{select}}</h1>
+    </div>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: "#start",
+        data() {
+          return {
+            select: " ",
+          };
+        },
+      });
+    </script>
+  </body>
+</html>

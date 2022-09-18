@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue 시작하기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>부처 선택해보기</h1>
+    <div id="start">
+      <div>
+        <input type="checkbox" value="기재부" v-model="checks" />
+        <label>기재부</label>
+        <input type="checkbox" value="산업부" v-model="checks" />
+        <label>산업부</label>
+        <input type="checkbox" value="금융위" v-model="checks" />
+        <label>금융위</label>
+        <input type="checkbox" value="농식품부" v-model="checks" />
+        <label>농식품부</label>
+        <input type="checkbox" value="과기부" v-model="checks" />
+        <label>과기부</label>
+      </div>
+      <h1>부처 선택 : {{checks}}</h1>
+    </div>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: "#start",
+        data() {
+          return {
+            checks: [],
+          };
+        },
+      });
+    </script>
+  </body>
+</html>
